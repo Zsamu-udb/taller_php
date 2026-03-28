@@ -10,9 +10,9 @@ switch ($route) {
         $controller->index();
         break;
 
-    case 'math':
-        require_once "controllers/MathController.php";
-        $controller = new MathController();
+    case 'fibonacci':
+        require_once "controllers/FibonacciFactorialController.php";
+        $controller = new FibonacciFactorialController();
         $controller->index();
         break;
 
@@ -47,12 +47,11 @@ switch ($route) {
         break;
 
     default:
-    require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php";
 
 
 
-    require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php";
+        require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php";
 
-    break;
-
+        break;
 }

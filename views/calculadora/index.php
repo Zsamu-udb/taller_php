@@ -25,9 +25,6 @@
     <button type="submit" name="limpiar">Limpiar Historial</button>
 </form>
 
-<?php if ($resultado !== null): ?>
-    <h3>Resultado: <?= $resultado ?></h3>
-<?php endif; ?>
 
 <?php if ($resultado === "Error"): ?>
     <p style="color:red;">No se puede dividir entre 0</p>

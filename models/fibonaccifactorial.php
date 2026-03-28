@@ -1,8 +1,14 @@
 <?php
-class Math {
 
-    public function fibonacci($n) {
+class FibonacciFactorial
+{
+
+    public function fibonacci($n)
+    {
         $serie = [];
+
+        if ($n <= 0) return $serie;
+
         $a = 0;
         $b = 1;
 
@@ -16,15 +22,20 @@ class Math {
         return $serie;
     }
 
-    public function factorial($n) {
+    public function factorial($n)
+    {
+        if ($n < 0) return [];
+
         $serie = [];
-        $fact = 1;
+        $acumulado = 1;
 
         for ($i = 1; $i <= $n; $i++) {
-            $fact *= $i;
-            $serie[] = $fact;
+            $acumulado *= $i;
+            $serie[] = $acumulado;
         }
 
         return $serie;
     }
+
+    
 }
