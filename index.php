@@ -47,14 +47,12 @@ switch ($route) {
         break;
 
     default:
-        echo "<h1>Bienvenido al Taller PHP</h1>";
-        echo "<a href='?route=acronimo'>Ir a Acrónimo</a>";
-        echo "<a href='?route=math'>Ir a Fibonacci</a>";
-        echo "<a href='?route=estadistica'>Ir a Estadistica</a>";
-        echo "<a href='?route=conjuntos'>Ir a Conjuntos</a>";
-        echo "<a href='?route=binario'>Ir a Binario</a>";
-        echo "<a href='?route=arbol'>Ir a Arbol</a>";
-        echo "<a href='?route=calculadora'>Ir a Calculadora</a>";
+    require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php";
 
-        break;
+
+
+    require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php";
+
+    break;
+
 }

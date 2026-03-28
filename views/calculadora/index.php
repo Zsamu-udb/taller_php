@@ -29,6 +29,12 @@
     <h3>Resultado: <?= $resultado ?></h3>
 <?php endif; ?>
 
+<?php if ($resultado === "Error"): ?>
+    <p style="color:red;">No se puede dividir entre 0</p>
+<?php elseif ($resultado !== null): ?>
+    <h3>Resultado: <?= $resultado ?></h3>
+<?php endif; ?>
+
 <h3>Historial</h3>
 
 <table border="1" cellpadding="5">
