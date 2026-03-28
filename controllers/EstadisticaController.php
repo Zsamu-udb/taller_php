@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/../models/Estadistica.php";
 
-class EstadisticaController {
+class EstadisticaController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $promedio = null;
         $media = null;
@@ -13,11 +15,10 @@ class EstadisticaController {
 
             $input = $_POST["numeros"];
 
-            // convertir string → array de números reales
             $numeros = array_map('floatval', explode(",", $input));
 
-            // limpiar vacíos
-            $numeros = array_filter($numeros, function($n) {
+
+            $numeros = array_filter($numeros, function ($n) {
                 return $n !== "";
             });
 

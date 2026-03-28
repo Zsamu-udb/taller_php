@@ -1,11 +1,9 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: 'Segoe UI', sans-serif;
     background: #05070d; /* más oscuro */
@@ -13,7 +11,6 @@ body {
     padding: 20px;
 }
 
-/* TITULOS */
 h1 {
     color: #00f7ff;
     margin-bottom: 10px;
@@ -24,7 +21,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* NAV */
 nav {
     background: #0b0f1a;
     padding: 12px;
@@ -52,7 +48,6 @@ nav a.home {
     color: #fff;
 }
 
-/* FORM */
 form {
     background: #0b0f1a;
     padding: 15px;
@@ -61,7 +56,6 @@ form {
     box-shadow: 0 0 15px #ff00c833;
 }
 
-/* INPUTS */
 input, select {
     background: #05070d;
     border: 1px solid #00f7ff55;
@@ -90,7 +84,6 @@ button[name="limpiar"] {
     color: white;
 }
 
-/* TABLAS */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -107,7 +100,6 @@ th, td {
     border-bottom: 1px solid #00f7ff33;
 }
 
-/* CARDS */
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -134,8 +126,7 @@ th, td {
     font-weight: bold;
 }
 
-/* 🌳 ÁRBOL CORREGIDO */
-/* CONTENEDOR */
+/*ÁRBOL XD*/
 .tree {
     display: flex;
     justify-content: center;
@@ -179,7 +170,6 @@ th, td {
     border-left: 2px solid #00f7ff;
 }
 
-/* QUITAR LÍNEAS SOBRANTES */
 .tree li:only-child::before,
 .tree li:only-child::after {
     display: none;
@@ -204,7 +194,6 @@ th, td {
     border-left: 2px solid #00f7ff;
 }
 
-/* NODOS */
 .tree li div {
     display: inline-block;
     padding: 8px 14px;

@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/../models/Binario.php";
 
-class BinarioController {
+class BinarioController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $resultado = null;
 
@@ -14,7 +16,6 @@ class BinarioController {
             if ($numero >= 0) {
                 $modelo = new Binario();
 
-                // puedes cambiar aquí si quieres usar el manual
                 $resultado = $modelo->convertirManual($numero);
             }
         }

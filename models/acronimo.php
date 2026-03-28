@@ -1,12 +1,12 @@
 <?php
-class Acronimo {
+class Acronimo
+{
 
-    public function generar($texto) {
+    public function generar($texto)
+    {
 
-        // eliminar signos excepto letras, espacios y guiones
         $texto = preg_replace("/[^a-zA-Z\s-]/", "", $texto);
 
-        // convertir guiones en espacios
         $texto = str_replace("-", " ", $texto);
 
         $palabras = explode(" ", $texto);

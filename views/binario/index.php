@@ -3,13 +3,12 @@
 <h2>Conversor Decimal a Binario</h2>
 
 <form method="POST">
-    <input 
-        type="number" 
-        name="numero" 
-        placeholder="Ingrese número entero" 
-        required 
-        min="0"
-    >
+    <input
+        type="number"
+        name="numero"
+        placeholder="Ingrese número entero"
+        required
+        min="0">
     <button type="submit">Convertir</button>
 </form>
 

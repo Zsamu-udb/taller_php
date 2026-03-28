@@ -1,13 +1,16 @@
 <?php
-class Binario {
+class Binario
+{
 
-    // método nativo (rápido)
-    public function convertir($numero) {
+    //existe un método re fácil: hago dos, uno prehecho y el manual
+
+    public function convertir($numero)
+    {
         return decbin($numero);
     }
 
-    // método manual (mejor valor académico)
-    public function convertirManual($numero) {
+    public function convertirManual($numero)
+    {
 
         if ($numero == 0) return "0";
 

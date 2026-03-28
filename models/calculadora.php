@@ -1,22 +1,35 @@
 <?php
 require_once __DIR__ . "/../config/db.php";
 
-class Calculadora {
+class Calculadora
+{
 
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = (new DB())->conectar();
     }
 
-    public function operar($a, $b, $op) {
+    public function operar($a, $b, $op)
+    {
 
         switch ($op) {
-            case '+': $res = $a + $b; break;
-            case '-': $res = $a - $b; break;
-            case '*': $res = $a * $b; break;
-            case '/': $res = ($b != 0) ? $a / $b : "Error"; break;
-            case '%': $res = ($a * $b) / 100; break;
+            case '+':
+                $res = $a + $b;
+                break;
+            case '-':
+                $res = $a - $b;
+                break;
+            case '*':
+                $res = $a * $b;
+                break;
+            case '/':
+                $res = ($b != 0) ? $a / $b : "Error";
+                break;
+            case '%':
+                $res = ($a * $b) / 100;
+                break;
         }
 
         $operacion = "$a $op $b";
@@ -28,11 +41,13 @@ class Calculadora {
         return $res;
     }
 
-    public function obtenerHistorial() {
+    public function obtenerHistorial()
+    {
         return $this->db->query("SELECT * FROM historial ORDER BY id DESC");
     }
 
-    public function limpiarHistorial() {
+    public function limpiarHistorial()
+    {
         $this->db->query("TRUNCATE historial");
     }
 }

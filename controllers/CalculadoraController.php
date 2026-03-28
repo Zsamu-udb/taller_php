@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/../models/Calculadora.php";
 
-class CalculadoraController {
+class CalculadoraController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $resultado = null;
         $modelo = new Calculadora();

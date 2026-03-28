@@ -4,19 +4,17 @@
 
 <form method="POST">
 
-    <input 
-        type="text" 
-        name="conjuntoA" 
-        placeholder="A: 1,2,3,4" 
-        required
-    >
+    <input
+        type="text"
+        name="conjuntoA"
+        placeholder="A: 1,2,3,4"
+        required>
 
-    <input 
-        type="text" 
-        name="conjuntoB" 
-        placeholder="B: 3,4,5,6" 
-        required
-    >
+    <input
+        type="text"
+        name="conjuntoB"
+        placeholder="B: 3,4,5,6"
+        required>
 
     <button type="submit">Calcular</button>
 </form>

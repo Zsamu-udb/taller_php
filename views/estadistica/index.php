@@ -3,12 +3,11 @@
 <h2>Promedio, Media y Moda</h2>
 
 <form method="POST">
-    <input 
-        type="text" 
-        name="numeros" 
-        placeholder="Ej: 1,2,3,4,5,5,6" 
-        required
-    >
+    <input
+        type="text"
+        name="numeros"
+        placeholder="Ej: 1,2,3,4,5,5,6"
+        required>
     <button type="submit">Calcular</button>
 </form>
 

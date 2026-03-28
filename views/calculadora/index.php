@@ -2,7 +2,6 @@
 
 <h2>Calculadora</h2>
 
-<!-- FORM CALCULAR -->
 <form method="POST">
     <input type="number" step="any" name="a" required placeholder="Número A">
     <input type="number" step="any" name="b" required placeholder="Número B">
@@ -20,7 +19,6 @@
 
 <br>
 
-<!-- FORM LIMPIAR (SEPARADO) -->
 <form method="POST">
     <button type="submit" name="limpiar">Limpiar Historial</button>
 </form>
@@ -41,7 +39,7 @@
         <th>Fecha</th>
     </tr>
 
-    <?php while($row = $historial->fetch_assoc()): ?>
+    <?php while ($row = $historial->fetch_assoc()): ?>
         <tr>
             <td><?= $row['operacion'] ?></td>
             <td><?= $row['resultado'] ?></td>

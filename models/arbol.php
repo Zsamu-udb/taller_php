@@ -17,7 +17,6 @@ class Nodo
 class Arbol
 {
 
-    // PRE + IN
     public function construirPreIn($pre, $in)
     {
         if (empty($pre) || empty($in)) return null;
@@ -39,7 +38,6 @@ class Arbol
         return $raiz;
     }
 
-    // IN + POST
     public function construirInPost($in, $post)
     {
         if (empty($in) || empty($post)) return null;

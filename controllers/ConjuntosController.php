@@ -1,9 +1,11 @@
 <?php
 require_once __DIR__ . "/../models/Conjuntos.php";
 
-class ConjuntosController {
+class ConjuntosController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $union = $inter = $diffAB = $diffBA = [];
 
@@ -12,11 +14,9 @@ class ConjuntosController {
             $inputA = $_POST["conjuntoA"];
             $inputB = $_POST["conjuntoB"];
 
-            // string → array de enteros
             $A = array_map('intval', explode(",", $inputA));
             $B = array_map('intval', explode(",", $inputB));
 
-            // limpiar vacíos implícitos
             $A = array_filter($A, fn($n) => $n !== null);
             $B = array_filter($B, fn($n) => $n !== null);
 

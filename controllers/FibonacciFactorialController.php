@@ -1,9 +1,11 @@
 <?php
 require_once "models/FibonacciFactorial.php";
 
-class FibonacciFactorialController {
+class FibonacciFactorialController
+{
 
-    public function index() {
+    public function index()
+    {
 
         $modelo = new FibonacciFactorial();
         $resultado = null;
