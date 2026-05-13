@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php"; ?>
+<?php require __DIR__ . "/../layout/header.php"; ?>
 
 <h2>Calculadora</h2>
 
@@ -24,9 +24,9 @@
 </form>
 
 
-<?php if ($resultado === "Error"): ?>
+<?php if (isset($resultado) && $resultado === "Error"): ?>
     <p style="color:red;">No se puede dividir entre 0</p>
-<?php elseif ($resultado !== null): ?>
+<?php elseif (isset($resultado) && $resultado !== null): ?>
     <h3>Resultado: <?= $resultado ?></h3>
 <?php endif; ?>
 
@@ -39,14 +39,18 @@
         <th>Fecha</th>
     </tr>
 
-    <?php while ($row = $historial->fetch_assoc()): ?>
-        <tr>
-            <td><?= $row['operacion'] ?></td>
-            <td><?= $row['resultado'] ?></td>
-            <td><?= $row['fecha'] ?></td>
-        </tr>
-    <?php endwhile; ?>
+    <?php if (isset($historial)): ?>
+
+        <?php while ($row = $historial->fetch_assoc()): ?>
+            <tr>
+                <td><?= $row['operacion'] ?></td>
+                <td><?= $row['resultado'] ?></td>
+                <td><?= $row['fecha'] ?></td>
+            </tr>
+        <?php endwhile; ?>
+
+    <?php endif; ?>
 
 </table>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php"; ?>
+<?php require __DIR__ . "/../layout/footer.php"; ?>

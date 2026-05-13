@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php"; ?>
+<?php require __DIR__ . "/../layout/header.php"; ?>
 
 <h2>Fibonacci / Factorial</h2>
 
@@ -15,8 +15,8 @@
 
 </form>
 
-<?php if ($resultado !== null): ?>
-
+<?php if (isset($resultado) && $resultado !== null): ?>
+    
     <h3>Resultado:</h3>
 
     <?php if (is_array($resultado)): ?>
@@ -27,4 +27,4 @@
 
 <?php endif; ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php"; ?>
+<?php require __DIR__ . "/../layout/footer.php"; ?>

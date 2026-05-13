@@ -7,7 +7,7 @@
     <button type="submit">Generar</button>
 </form>
 
-<?php if ($resultado !== null): ?>
+<?php if (isset($resultado) && $resultado !== null): ?>
     <h3>Resultado: <?= $resultado ?></h3>
 <?php endif; ?>
 

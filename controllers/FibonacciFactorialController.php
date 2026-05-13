@@ -1,27 +1,31 @@
 <?php
-require_once "models/FibonacciFactorial.php";
+
+require_once __DIR__ . "/../models/FibonacciFactorial.php";
 
 class FibonacciFactorialController
 {
-
     public function index()
     {
-
-        $modelo = new FibonacciFactorial();
         $resultado = null;
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $modelo = new FibonacciFactorial();
 
-            $n = intval($_POST["numero"]);
-            $operacion = $_POST["operacion"];
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-            if ($operacion == "fibonacci") {
+            $n = intval($_POST["numero"] ?? 0);
+
+            $operacion = $_POST["operacion"] ?? "";
+
+            if ($operacion === "fibonacci") {
+
                 $resultado = $modelo->fibonacci($n);
-            } else if ($operacion == "factorial") {
+
+            } elseif ($operacion === "factorial") {
+
                 $resultado = $modelo->factorial($n);
             }
         }
 
-        require "views/fibonacci/index.php";
+        require __DIR__ . "/../views/fibonacci/index.php";
     }
 }

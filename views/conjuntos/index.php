@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php"; ?>
+<?php require __DIR__ . "/../layout/header.php"; ?>
 
 <h2>Operaciones con Conjuntos</h2>
 
@@ -19,15 +19,30 @@
     <button type="submit">Calcular</button>
 </form>
 
-<?php if (!empty($union)): ?>
+<?php if (isset($union) && count($union) > 0): ?>
 
     <h3>Resultados:</h3>
 
-    <p><strong>Unión:</strong> <?= implode(", ", $union) ?></p>
-    <p><strong>Intersección:</strong> <?= implode(", ", $inter) ?></p>
-    <p><strong>A - B:</strong> <?= implode(", ", $diffAB) ?></p>
-    <p><strong>B - A:</strong> <?= implode(", ", $diffBA) ?></p>
+    <p>
+        <strong>Unión:</strong>
+        <?= implode(", ", $union ?? []) ?>
+    </p>
+
+    <p>
+        <strong>Intersección:</strong>
+        <?= implode(", ", $inter ?? []) ?>
+    </p>
+
+    <p>
+        <strong>A - B:</strong>
+        <?= implode(", ", $diffAB ?? []) ?>
+    </p>
+
+    <p>
+        <strong>B - A:</strong>
+        <?= implode(", ", $diffBA ?? []) ?>
+    </p>
 
 <?php endif; ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php"; ?>
+<?php require __DIR__ . "/../layout/footer.php"; ?>

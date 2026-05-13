@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/header.php"; ?>
+<?php require __DIR__ . "/../layout/header.php"; ?>
 
 <h2>Construcción de Árbol Binario</h2>
 
@@ -29,4 +29,4 @@
     </div>
 <?php endif; ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . "/taller_php/views/layout/footer.php"; ?>
+<?php require __DIR__ . "/../layout/footer.php"; ?>
