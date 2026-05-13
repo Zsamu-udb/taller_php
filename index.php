@@ -75,7 +75,12 @@ switch ($route) {
 
 ?>
 
-        <h1>Taller PHP - Aplicaciones</h1>
+        <section class="home-container">
+
+            <h1>Taller PHP - Aplicaciones</h1>
+
+
+        </section>
 
 <?php
 
