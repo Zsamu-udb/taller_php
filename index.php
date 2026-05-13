@@ -1,5 +1,7 @@
 <?php
 
+define("BASE_URL", dirname($_SERVER['SCRIPT_NAME']) . "/");
+
 $route = $_GET['route'] ?? 'home';
 
 switch ($route) {

@@ -3,7 +3,7 @@
 
 <head>
     <title>Taller PHP</title>
-    <link rel="stylesheet" href="/taller_php/css/style.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
     <h1>Taller PHP - Aplicaciones</h1>
 
 </head>
